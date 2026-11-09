@@ -141,3 +141,5 @@ row.parentNode.insertBefore(n,row.nextSibling)}catch(e){console.error('vg',e)}}
 if(!document.getElementById('vgx-css')){var st=document.createElement('style');st.id='vgx-css';st.textContent=CSS;document.head.appendChild(st)}
 ensure();setInterval(ensure,800);
 }catch(e){console.error("vg",e)}})();
+try{(function(){if(window.__vgPN)return;window.__vgPN=1;var l=document.createElement('link');l.rel='stylesheet';l.href='https://fonts.googleapis.com/css2?family=Readex+Pro:wght@600&display=swap';(document.head||document.documentElement).appendChild(l);var s=document.createElement('style');s.id='vg-pn-css';s.textContent=".ab-pd-name{font-family:'Readex Pro',sans-serif!important;font-weight:600!important;font-size:30px!important;line-height:1.4!important;letter-spacing:-.2px!important;text-transform:none!important;color:#1A1A1A!important}@media(max-width:700px){.ab-pd-name{font-size:23px!important;line-height:1.45!important}}";(document.head||document.documentElement).appendChild(s)})();
+}catch(e){console.error("vg",e)}
