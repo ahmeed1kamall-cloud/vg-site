@@ -84,29 +84,26 @@ x.innerHTML='<div><svg viewBox="0 0 30 20" width="36" height="24" style="border-
 run();setInterval(run,700)})();
 
 }catch(e){console.error("vg",e)}
-try{(function(){
-if(window.__vgML)return;window.__vgML=1;
-var s=document.createElement('style');s.id='vg-ml-css';
-s.textContent='#vg-ml{margin:4px 18px 14px;padding:12px;border-radius:18px;background:linear-gradient(135deg,#17171a,#0d0d0f);box-shadow:0 10px 24px rgba(0,0,0,.18);position:relative;overflow:hidden}'
-+'#vg-ml::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,#C8102E,#ff4d63,#C8102E,transparent)}'
-+'#vg-ml .ml-h{display:flex;align-items:center;justify-content:space-between;margin:0 4px 10px;color:#a9a9ae;font:600 11.5px/1 Jost,sans-serif;letter-spacing:1.4px;text-transform:uppercase}'
-+'#vg-ml .ml-h svg{width:15px;height:15px;fill:none;stroke:#ff4d63;stroke-width:1.8}'
-+'#vg-ml .ml-sw{display:grid;grid-template-columns:1fr 1fr;gap:6px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:5px;direction:ltr}'
-+'#vg-ml button{display:flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:10px;padding:11px 8px;background:transparent;color:#d6d6da;font:700 14px/1 inherit;cursor:pointer;transition:all .25s}'
-+'#vg-ml button svg{width:22px;height:15px;border-radius:3px;box-shadow:0 0 0 1px rgba(255,255,255,.25)}'
-+'#vg-ml button.on{background:linear-gradient(135deg,#e0263f,#9e0b23);color:#fff;box-shadow:0 6px 14px rgba(200,16,46,.4)}';
-document.head.appendChild(s);
-var EG='<svg viewBox="0 0 30 20"><rect width="30" height="6.67" fill="#CE1126"/><rect y="6.67" width="30" height="6.67" fill="#fff"/><rect y="13.33" width="30" height="6.67" fill="#000"/><circle cx="15" cy="10" r="2" fill="#C09300"/></svg>',
-US='<svg viewBox="0 0 30 20"><rect width="30" height="20" fill="#fff"/><path d="M0 0h30v1.54H0zm0 3.08h30v1.54H0zm0 3.08h30v1.54H0zm0 3.08h30v1.54H0zm0 3.08h30v1.54H0zm0 3.08h30v1.54H0zm0 3.08h30V20H0z" fill="#B22234"/><rect width="13" height="10.8" fill="#3C3B6E"/></svg>',
-G='<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>';
-function L(){return document.documentElement.getAttribute('data-vg-lang')==='en'?'en':'ar'}
-function run(){var sr=document.querySelector('.ab-mobile-menu .ab-mobile-menu-search');if(!sr)return;var w=document.getElementById('vg-ml');
- if(!w||w.previousElementSibling!==sr){if(w)w.remove();w=document.createElement('div');w.id='vg-ml';w.className='notranslate';w.setAttribute('translate','no');
-  w.innerHTML='<div class="ml-h"><span>Language · اللغة</span>'+G+'</div><div class="ml-sw"><button type="button" data-l="en">'+US+'English</button><button type="button" data-l="ar">'+EG+'العربية</button></div>';
-  sr.parentNode.insertBefore(w,sr.nextSibling);
-  [].forEach.call(w.querySelectorAll('button'),function(b){b.addEventListener('click',function(e){e.preventDefault();e.stopPropagation();if(window.__vgSet)window.__vgSet(b.getAttribute('data-l'));setTimeout(run,50)})})}
- var l=L();[].forEach.call(w.querySelectorAll('button'),function(b){var on=b.getAttribute('data-l')===l;if(b.classList.contains('on')!==on)b.classList.toggle('on',on)})}
-run();setInterval(run,600);
-})();
-
-}catch(e){console.error("vg",e)}
+(function(){try{
+var MAP={"micro-ingredients-super-enzymes-prebiotics-probiotics-240":"2028","carlyle-iron-65mg-plus-vitamin-c-180-coated-tablets":"05/2028","carlyle-panax-ginseng-ginkgo-5000mg-120-vegetarian-capsules":"09/2028","carlyle-maca-4800mg-red-yellow-black-180-capsules":"08/2028","nusapure-berberine-ceylon-cinnamon-complex-5000mg-180-veggie-capsules":"02/2027","zolotus-lions-mane-11-in-1-90-capsules":"11/2028","naturebell-zinc-picolinate-100mg-240-capsules":"05/2027","totaria-health-magnesium-complex-methylated-b-complex-25-in-1-120-capsules":"01/2028","nutricost-benfotiamine-vitamin-b1-300mg-90-capsules":"10/2028","nutricost-l-arginine-1000mg-150-tablets":"02/2028","deal-supplement-vitamin-d3-k2-5000iu-100mcg-250-softgels":"08/2027","microingredients-organic-mct-oil-powder-with-prebiotic-fiber-454g":"02/2028","microingredients-milk-thistle-extract-200mg-360-softgels":"09/2027","microingredients-vitamin-b2-riboflavin-400mg-240-softgels":"08/2027","microingredients-pumpkin-seed-oil-3000mg-with-saw-palmetto-300-softgels":"01/2028","horsetail-grass-440mg-100-vegan-capsules":"2030","evening-primrose-oil-with-black-cohosh-240-softgels":"01/2028","grape-seed-extract-resveratrol-red-wine-240-capsules":"10/2027","microingredients-nmn-200mg-120-vegetarian-capsules":"10/2027","solaray-high-energy-multivitamin-once-daily-200-vegcaps":"07/2029","enzymedica-digest-basic-digestive-enzymes-90-capsules":"01/2029","niacinamide-vitamin-b3-1000mg-400-capsules":"02/2028","tart-cherry-extract-3000mg-240-capsules":"10/2027","astragalus-root-extract-5000mg-20to1-180-vegan-capsules":"05/2028","nutricost-irish-sea-moss-1200mg-240-capsules":"09/2028","micro-ingredients-glucosamine-chondroitin-msm-turmeric-300-tablets":"02/2028","micro-ingredients-testosterone-plus-advanced-15-in-1-240-softgels":"06/2028","lions-mane-plus-omega-3-epa-dha-phosphatidylserine-240-softgels":"10/2027","organic-ashwagandha-drops-1200mg-60-servings":"12/2027","ashwagandha-240-softgels":"01/2028","vitamin-a-25000-iu":"06/2027","microingredients-oil-of-oregano":"03/2028","tongkatali":"06/2029","b1":"09/2027","hyaluronic":"08/2027","tums":"10/2028","nad1500":"02/2028","boswellia":"12/2028","omega3nordic":"01/2029","citicoline":"01/2028","ltyrosine":"08/2027","vitamine1000":"06/2028","potassium":"03/2028","yohimbine":"09/2027","tribulusterrestric":"02/2029","daspartic":"10/2028","citrus":"12/2028","lutein":"05/2028","vitaminc1000":"01/2027","taurine":"07/2027","coq10mega":"04/2029","oxbilee":"05/2028","blackcumin":"10/2027","superenzymes":"09/2027","glycine":"01/2028","zinccoper":"07/2029","ksm":"01/2029","shilajit1000mg":"12/2028","dmannose":"01/2029","boron":"02/2028","tongatali":"03/2028","dim":"09/2028","solgarchelated":"11/2029","spirulinachlorella":"09/2027","Turmeric":"01/2028","arginine":"05/2028","testojack300":"06/2027","niacin500":"04/2027","selenium200":"2030","berberine3000":"02/2028","macaroot":"03/2027","d310000k2":"05/2027","selenium200mcg":"02/2029","tribulus":"06/2028","pqq":"03/2028","2000vitaminc":"06/2027","curcuminwithblack":"12/2027","blackmaca":"05/2028","mctoil":"04/2028","colonanddetox":"06/2027","ginsnegkorean":"06/2028","multivitaminforwomen":"07/2027","nadcomplex":"06/2027","shilajit":"03/2027","liverdetox":"01/2028","collagen":"01/2028","coq":"06/2027","gluthione":"05/2027","tongat":"04/2029","alpha":"10/2027","methylatedmultivitamins":"11/2027","omegafishoil":"11/2027","vitamina":"06/2029","nadnmnh":"01/2028","plusbcomplex":"07/2027","tudca":"03/2028","vitamine":"10/2027","extrastrength":"04/2027","nmnh":"10/2027","nitricoxide":"03/2029","potassiummagnesium":"10/2027","oxbile":"2028","magnesium-glycinate":"10/2027","carnitine":"05/2028","omega3":"11/2027","hornygoat":"08/2027","milkthistle":"2029","femalehormone":"08/2028","200probiotics":"03/2028","glycinate":"05/2028","ashwagandha":"12/2027","oxbille":"11/2027","berberine":"11/2027","D35000":"03/2028","CoQ":"10/2027","d3":"06/2027","ginseng":"05/2028","vitamind3":"01/2028","vitamins":"2028","Supplement":"10/2027","life-extension-sea-iodine-1000mcg-60-vegetarian-capsules":"10/2027","shilajit-3000mg-11-in-1-micro-ingredients":"01/2028"};
+var CSS='#vgx{font-family:Jost,"Segoe UI",Tahoma,sans-serif;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 0;margin:12px 0;border-top:.5px solid #cfcfcf;border-bottom:.5px solid #cfcfcf;direction:rtl}'
++'html[data-vg-lang="en"] #vgx{direction:ltr}'
++'#vgx .l{display:flex;align-items:center;gap:7px;font-size:13px;color:#555}'
++'#vgx svg{width:17px;height:17px;flex:none;color:#1A1A1A}'
++'#vgx .d{font-size:15px;font-weight:500;letter-spacing:1px;color:#1A1A1A;direction:ltr;margin:0}'
++'html[data-vg-lang="en"] #vgx .a{display:none}html:not([data-vg-lang="en"]) #vgx .e{display:none}'
++'@media(max-width:600px){#vgx{padding:9px 0}#vgx .d{font-size:14px}}';
+var CAL='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M16 3v4M8 3v4M4 11h16"/></svg>';
+function html(d){var t=d.indexOf('/')>0?d.replace('/',' / '):d;
+return '<div id="vgx" class="notranslate" translate="no"><span class="l">'+CAL+'<span class="a">تاريخ الصلاحية</span><span class="e">Expiry date</span></span><span class="d">'+t+'</span></div>'}
+function slug(){var m=location.pathname.match(/^\/products\/([^\/?#]+)/);return m?decodeURIComponent(m[1]):null}
+function ensure(){try{var s=slug(),d=s&&MAP[s],el=document.getElementById('vgx');
+if(!d){if(el)el.remove();return}
+if(el&&el.getAttribute('data-s')===s)return;
+if(el)el.remove();
+var row=document.querySelector('.ab-pd-meta-row');if(!row)return;
+var w=document.createElement('div');w.innerHTML=html(d);var n=w.firstChild;n.setAttribute('data-s',s);
+row.parentNode.insertBefore(n,row.nextSibling)}catch(e){console.error('vg',e)}}
+if(!document.getElementById('vgx-css')){var st=document.createElement('style');st.id='vgx-css';st.textContent=CSS;document.head.appendChild(st)}
+ensure();setInterval(ensure,800);
+}catch(e){console.error("vg",e)}})();
