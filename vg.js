@@ -120,15 +120,23 @@ var CSS='#vgx{font-family:Jost,"Segoe UI",Tahoma,sans-serif;display:flex;align-i
 +'html[data-vg-lang="en"] #vgx .a{display:none}html:not([data-vg-lang="en"]) #vgx .e{display:none}'
 +'@media(max-width:600px){#vgx{padding:9px 0}#vgx .d{font-size:14px}}';
 var CAL='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M16 3v4M8 3v4M4 11h16"/></svg>';
+var RE=/^\s*(?:expiry|exp)\s*[:：]\s*(?:(\d{1,2})\s*\/\s*)?(\d{4})\s*$/i;
 function html(d){var t=d.indexOf('/')>0?d.replace('/',' / '):d;
 return '<div id="vgx" class="notranslate" translate="no"><span class="l">'+CAL+'<span class="a">تاريخ الصلاحية</span><span class="e">Expiry date</span></span><span class="d">'+t+'</span></div>'}
 function slug(){var m=location.pathname.match(/^\/products\/([^\/?#]+)/);return m?decodeURIComponent(m[1]):null}
-function ensure(){try{var s=slug(),d=s&&MAP[s],el=document.getElementById('vgx');
+function fromDesc(){var ps=document.querySelectorAll('.product_description p'),r=null;
+for(var i=0;i<ps.length;i++){var p=ps[i],m=RE.exec(p.textContent);
+if(m){p.style.display='none';p.setAttribute('translate','no');p.classList.add('notranslate');if(!r){var mo=m[1]?('0'+m[1]).slice(-2):'';r=mo?mo+'/'+m[2]:m[2]}}}
+return r}
+function ensure(){try{var s=slug(),el=document.getElementById('vgx');
+if(!s){if(el)el.remove();return}
+var d=fromDesc()||MAP[s];
 if(!d){if(el)el.remove();return}
-if(el&&el.getAttribute('data-s')===s)return;
+var key=s+'|'+d;
+if(el&&el.getAttribute('data-s')===key)return;
 if(el)el.remove();
 var row=document.querySelector('.ab-pd-meta-row');if(!row)return;
-var w=document.createElement('div');w.innerHTML=html(d);var n=w.firstChild;n.setAttribute('data-s',s);
+var w=document.createElement('div');w.innerHTML=html(d);var n=w.firstChild;n.setAttribute('data-s',key);
 row.parentNode.insertBefore(n,row.nextSibling)}catch(e){console.error('vg',e)}}
 if(!document.getElementById('vgx-css')){var st=document.createElement('style');st.id='vgx-css';st.textContent=CSS;document.head.appendChild(st)}
 ensure();setInterval(ensure,800);
