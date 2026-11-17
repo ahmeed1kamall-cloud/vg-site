@@ -246,3 +246,4 @@ function run(){
 run();setInterval(run,500);
 })();
 }catch(e){console.error("vg",e)}
+try{(function(){if(document.getElementById('vg-pol-css'))return;var P='.page_content .ql-editor';var s=document.createElement('style');s.id='vg-pol-css';s.textContent='html:not([data-vg-lang="en"]) '+P+'{direction:rtl;text-align:right}'+P+' li[data-list="bullet"]{list-style-type:disc}'+P+' li[data-list="ordered"]{list-style-type:decimal}html:not([data-vg-lang="en"]) '+P+' ol{padding-right:1.5em;padding-left:0}'+P+' li::before,'+P+' .ql-ui{display:none!important;content:none!important}';(document.head||document.documentElement).appendChild(s)})()}catch(e){console.error("vg",e)}
